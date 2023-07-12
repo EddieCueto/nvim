@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
     -- A list of servers to automatically install if they"re not already installed
     --ensure_installed = { "pylsp", "gopls", "lua_ls", "rust_analyzer" },
     --ensure_installed = { "pylsp", "lua_ls", "julials", "zls", "ltex", "texlab" },
-    ensure_installed = { "bashls", "pylsp", "lua_ls", "julials", "ltex", "texlab" },
+    ensure_installed = { "pylsp", "lua_ls", "julials", "zls", "ltex", "texlab" },
 })
 
 -- Set different settings for different languages" LSP
@@ -86,17 +86,18 @@ lspconfig.pylsp.setup({
     on_attach = on_attach,
 })
 
---lspconfig.julials.setup{}
---[[
-]]--
+--lspconfig.gopls.setup({
+--    on_attach = on_attach,
+--})
+
 lspconfig.julials.setup({
     --on_attach = on_attach,
-    --symbol_cache_download = true,
+    symbol_cache_download = true,
     --symbol_server = "https://symbol-server",
     on_new_config = function(new_config, _)
         local julia = vim.fn.expand("/usr/share/julia/bin/julia")
         if require'lspconfig'.util.path.is_file(julia) then
-            vim.notify("julials loaded?!")
+	    vim.notify("Hello!")
             new_config.cmd[1] = julia
         end
     end
@@ -104,14 +105,6 @@ lspconfig.julials.setup({
 
 lspconfig.texlab.setup({
     on_attach = on_attach,
-})
-
-lspconfig.ltex.setup({
-  settings = {
-		ltex = {
-			language = "en-GB",
-		},
-	},
 })
 
 lspconfig.zls.setup({
@@ -122,6 +115,13 @@ lspconfig.bashls.setup({
     on_attach = on_attach,
 })
 
+lspconfig.ltex.setup({
+  settings = {
+		ltex = {
+			language = "en-GB",
+		},
+	},
+})
 -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
 --lspconfig.rust_analyzer.setup({
 --    on_attach = on_attach,

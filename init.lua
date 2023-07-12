@@ -1,60 +1,14 @@
--- GENERAL
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.autocommands"
-require "user.colorscheme"
-require "user.lsp.init"
-
--- PLUGINS
-
-require "user.autopairs"
-require "user.comment"
-require "user.impatient"
-require "user.surround"
---require "user.yanky"
-require "user.undotree"
-
--- Mappings
-require "user.whichkey"
-
--- Terminal
-require "user.toggleterm"
-
--- File Management
-require "user.nvim-tree"
-require "user.sessions"
-
--- Appearance
---require "user.bufferline"
-require "user.lualine"
-require "user.indentline"
-require "user.alpha"
-require "user.illuminate"
-
--- Autocomplete
-require "user.cmp"
-
--- LaTeX
-require "user.vimtex"
-
--- Markdown
-require "user.autolist"
-
--- Snippets
-require "user.luasnip"
-
--- Telescope
-require "user.telescope"
-require "user.dressing"
-
--- Treesitter
-require "user.treesitter"
-
--- Git
-require "user.gitsigns"
-
-
-
-
-
+require("autopairs")
+-- require("buffers") -- not wotking atm
+require("colorscheme")
+require("grammar")
+require("keymaps")
+require("lsp")
+require("lua-line")
+require("nvimtree")
+require("options")
+require("plugins")
+require("telescope")
+require("term")
+require("treesitter")
+require("whichkey")
