@@ -37,6 +37,16 @@ vim.opt.hlsearch = false            -- do not highlight matches
 vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 
+-- LSP options
+vim.diagnostic.config({
+  virtual_text = false
+})
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+
+
 -- Leader key
 vim.g.mapleader = " "
 --vim.g.maplocalleader = " "
@@ -66,10 +76,10 @@ vim.g.python3_host_prog = "/usr/local/bin/python"
 -- Vimtex options:
 vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_general_viewer = "zathura"
---vim.g.vimtex_quickfix_mode = 0
+vim.g.vimtex_quickfix_mode = 0
 
----- Ignore mappings
---vim.g["vimtex_mappings_enabled"] = 1
+-- Ignore mappings
+vim.g.vimtex_mappings_enabled = 1
 
 ---- Auto Indent
 --vim.g["vimtex_indent_enabled"] = 1
