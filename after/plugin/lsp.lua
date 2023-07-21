@@ -10,6 +10,7 @@ lsp.ensure_installed({
   'bashls',
   'julials',
   'lua_ls',
+  'ltex',
   'pylsp',
   'texlab',
   'zls'
