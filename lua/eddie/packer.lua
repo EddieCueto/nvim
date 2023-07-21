@@ -58,6 +58,9 @@ return require('packer').startup(function(use)
   }
 }
 
+    -- Latex on NVIM
+    use 'lervag/vimtex'
+
     -- :FixWhitespace
     use "bronson/vim-trailing-whitespace"
 

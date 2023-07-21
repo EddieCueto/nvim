@@ -63,29 +63,26 @@ vim.g.completion_enable_auto_popup = 1
 vim.g.loaded_python_provider = 0
 vim.g.python3_host_prog = "/usr/local/bin/python"
 
--- PDF Viewer:
--- http://manpages.ubuntu.com/manpages/trusty/man5/zathurarc.5.html
-vim.g["vimtex_view_method"] = "zathura"
-vim.g["vimtex_quickfix_mode"] =0
+-- Vimtex options:
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_general_viewer = "zathura"
+--vim.g.vimtex_quickfix_mode = 0
 
--- Ignore mappings
-vim.g["vimtex_mappings_enabled"] = 1
+---- Ignore mappings
+--vim.g["vimtex_mappings_enabled"] = 1
 
--- Auto Indent
-vim.g["vimtex_indent_enabled"] = 1
+---- Auto Indent
+--vim.g["vimtex_indent_enabled"] = 1
 
--- Syntax highlighting
-vim.g["vimtex_syntax_enabled"] = 1
+---- Syntax highlighting
+vim.g.vimtex_syntax_enabled = 0
 
 -- Error suppression:
--- https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt
-
-vim.g["vimtex_log_ignore"] = ({
+vim.g.vimtex_log_ignore = ({
   "Underfull",
   "Overfull",
   "specifier changed to",
   "Token not allowed in a PDF string",
 })
 
-vim.g["vimtex_context_pdf_viewer"] = "zathura"
 
