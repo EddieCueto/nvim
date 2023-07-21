@@ -8,6 +8,7 @@ end)
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
   'bashls',
+  'clangd',
   'julials',
   'lua_ls',
   'ltex',
