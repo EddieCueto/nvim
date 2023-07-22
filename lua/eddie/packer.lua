@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
 	  end
   })
 
-  -- Color Coloring
+  -- Code Coloring
   use({ 'nvim-treesitter/nvim-treesitter', { run =  ':TSUpdate' } })
   use( 'nvim-treesitter/playground' )
 
@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
 
   -- Git Status
   use( 'tpope/vim-fugitive' )
+  use('airblade/vim-gitgutter')
 
   -- Language Servers
   use {
