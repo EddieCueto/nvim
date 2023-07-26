@@ -27,10 +27,20 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 require('lspconfig').texlab.setup({})
 
+local path = vim.fn.stdpath("config") .. "/after/plugin/dictionary-gb.txt"
+local words = {}
+
+for word in io.open(path, "r"):lines() do
+	table.insert(words, word)
+end
+
 require('lspconfig').ltex.setup({
   settings = {
 		ltex = {
 			language = "en-GB",
+            dictionary = {
+                ["en-GB"] = words,
+            },
 		},
 	},
 })
