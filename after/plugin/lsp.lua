@@ -11,7 +11,7 @@ lsp.ensure_installed({
   --'clangd',
   'julials',
   --'lua_ls',
-  'ltex',
+  --'ltex',
   'pylsp',
   --'texlab',
   --'zls'
