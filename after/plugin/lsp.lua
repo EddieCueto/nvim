@@ -31,18 +31,7 @@ require('lspconfig').clangd.setup({})
 --    on_attach = on_attach,
 --})
 
-require('lspconfig').julials.setup({
-    --on_attach = on_attach,
-    symbol_cache_download = true,
-    --symbol_server = "https://symbol-server",
-    on_new_config = function(new_config, _)
-        local julia = vim.fn.expand("/usr/local/share/julia/bin/julia")
-        if require'lspconfig'.util.path.is_file(julia) then
-	    vim.notify("Hello!")
-            new_config.cmd[1] = julia
-        end
-    end
-})
+require('lspconfig').julials.setup({})
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
