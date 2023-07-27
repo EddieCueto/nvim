@@ -47,25 +47,17 @@ vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {f
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> Linux
 -- Leader key
 vim.g.mapleader = " "
 --vim.g.maplocalleader = " "
 vim.g.maplocalleader = "\\"
 
-<<<<<<< HEAD
-=======
 -- Undotree instead of swapfile
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
->>>>>>> Linux
 -- Airline
 vim.g.airline_powerline_fonts = 1
 
