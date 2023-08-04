@@ -28,9 +28,7 @@ require('lspconfig').bashls.setup({})
 
 require('lspconfig').clangd.setup({})
 
---require('lspconfig').gopls.setup({
---    on_attach = on_attach,
---})
+--require('lspconfig').gopls.setup({})
 
 require('lspconfig').julials.setup({})
 
