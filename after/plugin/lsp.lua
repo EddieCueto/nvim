@@ -1,25 +1,26 @@
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+    lsp.default_keymaps({ buffer = bufnr })
 end)
 
 -- Language servers
 lsp.ensure_installed({
-  -- Replace these with whatever servers you want to install
-  'bashls',
-  --'clangd',
-  'julials',
-  --'lua_ls',
-  --'ltex',
-  'pylsp',
-  --'texlab',
-  --'zls'
+    -- Replace these with whatever servers you want to install
+    'bashls',
+    --'clangd',
+    'julials',
+    --'lua_ls',
+    --'ltex',
+    'pylsp',
+    --'texlab',
+    --'zls'
 })
 
 --[[
     START LANGUAGE SERVERS CONFIG HERE!!!
-]]--
+]]
+--
 
 -- (Optional) Configure lua language server for neovim
 
@@ -42,18 +43,18 @@ local path = vim.fn.stdpath("config") .. "/after/plugin/dictionary-gb.txt"
 local words = {}
 
 for word in io.open(path, "r"):lines() do
-	table.insert(words, word)
+    table.insert(words, word)
 end
 
 require('lspconfig').ltex.setup({
-  settings = {
-		ltex = {
-			language = "en-GB",
+    settings = {
+        ltex = {
+            language = "en-GB",
             dictionary = {
                 ["en-GB"] = words,
             },
-		},
-	},
+        },
+    },
 })
 
 -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
@@ -74,6 +75,7 @@ require('lspconfig').zls.setup({})
 
 --[[
     END LANGUAGE SERVERS CONFIG HERE!!!
-]]--
+]]
+--
 
 lsp.setup()

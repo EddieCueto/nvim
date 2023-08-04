@@ -59,6 +59,9 @@ return require('packer').startup(function(use)
   }
 }
 
+    -- Code formatting
+    use "lukas-reineke/lsp-format.nvim"
+
     -- Latex on NVIM
     use 'lervag/vimtex'
 
