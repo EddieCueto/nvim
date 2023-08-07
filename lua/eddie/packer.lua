@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
 
   -- Git Status
   use( 'tpope/vim-fugitive' )
+  use('airblade/vim-gitgutter')
 
   -- Language Servers
   use {
@@ -57,6 +58,9 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
+
+    -- Code formatting
+    use "lukas-reineke/lsp-format.nvim"
 
     -- Latex on NVIM
     use 'lervag/vimtex'
