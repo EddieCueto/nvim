@@ -1,9 +1,9 @@
 require("lsp-format").setup {}
 
 local on_attach = function(client)
-    require("lsp-format").on_attach(client)
+  require("lsp-format").on_attach(client)
 
-    -- ... custom code ...
+  -- ... custom code ...
 end
 
 require("lspconfig").bashls.setup { on_attach = on_attach }
