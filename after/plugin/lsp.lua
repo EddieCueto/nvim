@@ -5,6 +5,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Language servers
+if (MY_OS == 'Linux') then
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
   'bashls',
@@ -16,6 +17,9 @@ lsp.ensure_installed({
   'texlab',
   'zls'
 })
+elseif (MY_OS == 'FreeBSD') then
+    print('On FreeBSD')
+end
 
 --[[
     START LANGUAGE SERVERS CONFIG HERE!!!
