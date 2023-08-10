@@ -5,7 +5,8 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Language servers
-if (MY_OS == 'Linux') then
+if (MY_OS == 'Linux')
+then
     lsp.ensure_installed({
         -- Replace these with whatever servers you want to install
         'bashls',
@@ -15,15 +16,18 @@ if (MY_OS == 'Linux') then
         'ltex',
         'pylsp',
         'texlab',
-        'zls'
+        --'zls'
     })
-elseif (MY_OS == 'FreeBSD') then
+elseif (MY_OS == 'FreeBSD')
+then
     lsp.ensure_installed({
         -- Replace these with whatever servers you want to install
         'bashls',
         'julials',
         'pylsp',
     })
+else
+    print('Should never be here')
 end
 
 --[[
