@@ -1,5 +1,0 @@
-CIFAR
-MNIST
-LeNet
-MUL
-BCNN

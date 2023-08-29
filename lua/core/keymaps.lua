@@ -24,23 +24,23 @@ vim.keymap.set("n", "<BS>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>", opts)
 
 -- Telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-vim.keymap.set("n", "<leader>ps", function ()
-    builtin.grep_string( { search = vim.fn.input("Grep > ") } );
-end)
+--local builtin = require("telescope.builtin")
+--vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
+--vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+--vim.keymap.set("n", "<leader>ps", function ()
+--    builtin.grep_string( { search = vim.fn.input("Grep > ") } );
+--end)
 
 -- Harpoon
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-
-vim.keymap.set("n", "<C-h>", function () ui.nav_file(1) end)
-vim.keymap.set("n", "<C-t>", function () ui.nav_file(2) end)
-vim.keymap.set("n", "<C-n>", function () ui.nav_file(3) end)
-vim.keymap.set("n", "<C-s>", function () ui.nav_file(4) end)
+--local mark = require("harpoon.mark")
+--local ui = require("harpoon.ui")
+--vim.keymap.set("n", "<leader>a", mark.add_file)
+--vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+--
+--vim.keymap.set("n", "<C-h>", function () ui.nav_file(1) end)
+--vim.keymap.set("n", "<C-t>", function () ui.nav_file(2) end)
+--vim.keymap.set("n", "<C-n>", function () ui.nav_file(3) end)
+--vim.keymap.set("n", "<C-s>", function () ui.nav_file(4) end)
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
@@ -72,7 +72,3 @@ vim.keymap.set("v", ">", ">gv", opts)
 -- Move text on visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
-
-
-
-

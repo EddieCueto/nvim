@@ -88,5 +88,3 @@ vim.g.vimtex_log_ignore = ({
   "specifier changed to",
   "Token not allowed in a PDF string",
 })
-
-
