@@ -80,13 +80,13 @@ local plugins = {
     {
         'mbbill/undotree',
         config = function()
-            vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>", { desc = "Telescope Undo"})
+            vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>", { desc = "Telescope Undo" })
         end
     },
     {
         'tpope/vim-fugitive',
         config = function()
-            vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open Fugitive Panel"})
+            vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open Fugitive Panel" })
         end
     },
     { 'tpope/vim-repeat' },
