@@ -67,13 +67,13 @@ local plugins = {
     },
     { 'nvim-telescope/telescope-fzf-native.nvim',    build = 'make' },
     {
-    "folke/tokyonight.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      -- load the colorscheme here
-      vim.cmd('colorscheme tokyonight-night')
-    end,
+        "folke/tokyonight.nvim",
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            -- load the colorscheme here
+            vim.cmd('colorscheme tokyonight-night')
+        end,
     },
     'nvim-treesitter/playground',
     'ThePrimeagen/harpoon',
@@ -89,7 +89,7 @@ local plugins = {
             vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open Fugitive Panel"})
         end
     },
-    'tpope/vim-repeat',
+    { 'tpope/vim-repeat' },
     {
         'numToStr/Comment.nvim',
         config = function()
@@ -216,6 +216,9 @@ local plugins = {
     },
     {
         'bronson/vim-trailing-whitespace'
+    },
+    {
+        'akinsho/toggleterm.nvim', version = "*", config = true
     },
     {
         "kylechui/nvim-surround",
