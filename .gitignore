@@ -1,2 +1,2 @@
 *.json
-packer_compiled.lua
+config/*
