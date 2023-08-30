@@ -212,6 +212,12 @@ local plugins = {
         end
     },
     {
+        'lervag/vimtex'
+    },
+    {
+        'bronson/vim-trailing-whitespace'
+    },
+    {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
         event = "VeryLazy",
@@ -251,11 +257,11 @@ local plugins = {
         'voldikss/vim-floaterm',
         config = function()
             vim.keymap.set("n", "<leader>ft",
-                "<cmd>:FloatermNew --height=0.7 --width=0.8 --wintype=float --name=floaterm1 --position=center --autoclose=2<CR>", { desc = "Open FloatTerm"})
+                "<cmd>:FloatermNew --height=0.7 --width=0.8 --wintype=float --name=floaterm1 --position=center --autoclose=2<CR>", { desc = "Open FloatTerm" })
             vim.keymap.set("n", "<leader>flt",
-                "<cmd>:FloatermToggle<CR>", { desc = "Toggle FloatTerm"})
+                "<cmd>:FloatermToggle<CR>", { desc = "Toggle FloatTerm" })
             vim.keymap.set("t", "<leader>flt",
-                "<cmd>:FloatermToggle<CR>", { desc = "Toggle FloatTerm"})
+                "<cmd>:FloatermToggle<CR>", { desc = "Toggle FloatTerm" })
         end
     },
     {

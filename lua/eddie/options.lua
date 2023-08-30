@@ -13,7 +13,10 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
+-- Fonts
+vim.opt.encoding = "utf-8"
+vim.opt.guifont = "FiraCodeNerdFont-Regular:h10"
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -40,4 +43,26 @@ vim.diagnostic.config({
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+-- Vimtex options:
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_general_viewer = "zathura"
+vim.g.vimtex_quickfix_mode = 0
+
+-- Ignore mappings
+vim.g.vimtex_mappings_enabled = 1
+
+---- Auto Indent
+--vim.g["vimtex_indent_enabled"] = 1
+
+---- Syntax highlighting
+vim.g.vimtex_syntax_enabled = 0
+
+-- Error suppression:
+vim.g.vimtex_log_ignore = ({
+    "Underfull",
+    "Overfull",
+    "specifier changed to",
+    "Token not allowed in a PDF string",
+})
 
