@@ -1,5 +1,6 @@
 # TODO
 
 - [ ] config
-  - [ ] better autocomplete shortcuts
   - [ ] better git integration
+  - [ ] renew LaTeX configuration for Lazy
+  - [ ] set better key maps and options
