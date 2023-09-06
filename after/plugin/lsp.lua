@@ -1,18 +1,41 @@
 local lsp = require('lsp-zero')
 
+local f = io.popen("uname -s")
+if (f ~= nil) then
+    MY_OS = f:read("*a")
+    MY_OS = string.gsub(MY_OS, "%s+", "")
+    f:close()
+end
+
+
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'bashls',
-    'clangd',
-    'dockerls',
-    'julials',
-    'lua_ls',
-    'ltex',
-    'pylsp',
-    'texlab',
-    'zls'
-})
+if (MY_OS == 'Linux')
+then
+    lsp.ensure_installed({
+        -- Replace these with whatever servers you want to install
+        'bashls',
+        'clangd',
+        'dockerls',
+        'julials',
+        'lua_ls',
+        'ltex',
+        'pylsp',
+        'texlab',
+        'zls'
+    })
+elseif (MY_OS == 'FreeBSD')
+then
+    lsp.ensure_installed({
+        -- Replace these with whatever servers you want to install
+        'bashls',
+        'dockerls',
+        'julials',
+        'pylsp',
+    })
+else
+    print('Should never be here')
+end
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
