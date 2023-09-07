@@ -102,6 +102,7 @@ local plugins = {
             require("nvim-autopairs").setup()
         end
     },
+    { 'vimwiki/vimwiki' },
     {
         "nvim-neotest/neotest",
         dependencies = {
