@@ -3,3 +3,7 @@ MNIST
 LeNet
 MUL
 BCNN
+Grangegorman
+Cueto
+Mendoza
+Maynooth
