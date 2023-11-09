@@ -11,4 +11,6 @@ Frobenius
 Neuromorphic
 neuromorphic
 NN
+pytorch
+Pytorch
 
