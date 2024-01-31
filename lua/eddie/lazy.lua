@@ -103,6 +103,7 @@ local plugins = {
         end
     },
     { 'vimwiki/vimwiki' },
+    { "nvim-tree/nvim-tree.lua" },
     {
         "nvim-neotest/neotest",
         dependencies = {
