@@ -49,6 +49,10 @@ vim.g.vimtex_view_method = "zathura"
 vim.g.vimtex_general_viewer = "zathura"
 vim.g.vimtex_quickfix_mode = 0
 
+-- OBSD options
+--vim.g.vimtex_compiler_latexmk={ 'cmd': '' }
+
+
 -- Ignore mappings
 vim.g.vimtex_mappings_enabled = 1
 
