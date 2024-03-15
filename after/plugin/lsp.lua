@@ -21,6 +21,7 @@ then
         'lua_ls',
         'ltex',
         'pylsp',
+        'rust_analyzer',
         'texlab',
         'zls'
     })
@@ -31,6 +32,7 @@ then
         'bashls',
         'dockerls',
         'pylsp',
+        'rust_analyzer'
     })
 else
     print('Should never be here')
@@ -78,7 +80,6 @@ then
     --require('lspconfig').gopls.setup({})
 
     require('lspconfig').julials.setup({})
-
 
     --require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
     require('lspconfig').lua_ls.setup({
@@ -134,17 +135,15 @@ then
         },
     })
 
-    -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
-    --require('lspconfig').rust_analyzer.setup({
-    --    on_attach = on_attach,
-    --    settings = {
-    --        ["rust-analyzer"] = {
-    --            inlayHints = {
-    --                closingBraceHints = true, -- Whether to show inlay hints after a closing } to indicate what item it belongs to.
-    --            }
-    --        }
-    --    }
-    --})
+    require('lspconfig').rust_analyzer.setup({
+        settings = {
+            ["rust-analyzer"] = {
+                diagnostics = {
+                    enable = false;
+                }
+            }
+        }
+    })
 
     require('lspconfig').texlab.setup({})
 
@@ -175,17 +174,15 @@ then
     --    },
     --})
 
-    -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
-    --require('lspconfig').rust_analyzer.setup({
-    --    on_attach = on_attach,
-    --    settings = {
-    --        ["rust-analyzer"] = {
-    --            inlayHints = {
-    --                closingBraceHints = true, -- Whether to show inlay hints after a closing } to indicate what item it belongs to.
-    --            }
-    --        }
-    --    }
-    --})
+    require('lspconfig').rust_analyzer.setup({
+        settings = {
+            ["rust-analyzer"] = {
+                diagnostics = {
+                    enable = false;
+                }
+            }
+        }
+    })
 
     -- require('lspconfig').texlab.setup({})
 
