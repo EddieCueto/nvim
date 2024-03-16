@@ -31,8 +31,7 @@ then
         -- Replace these with whatever servers you want to install
         'bashls',
         'dockerls',
-        'pylsp',
-        'rust_analyzer'
+        'pylsp'
     })
 else
     print('Should never be here')
@@ -184,7 +183,7 @@ then
         }
     })
 
-    -- require('lspconfig').texlab.setup({})
+    require('lspconfig').texlab.setup({})
 
 else
     print('Should never be here')
