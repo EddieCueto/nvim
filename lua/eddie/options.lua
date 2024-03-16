@@ -40,6 +40,7 @@ vim.opt.colorcolumn = "80"
 vim.diagnostic.config({
     virtual_text = false
 })
+
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
@@ -51,7 +52,6 @@ vim.g.vimtex_quickfix_mode = 0
 
 -- OBSD options
 --vim.g.vimtex_compiler_latexmk={ 'cmd': '' }
-
 
 -- Ignore mappings
 vim.g.vimtex_mappings_enabled = 1
