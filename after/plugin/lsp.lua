@@ -185,6 +185,8 @@ then
 
     require('lspconfig').texlab.setup({})
 
+    require('lspconfig').zls.setup({})
+
 else
     print('Should never be here')
 end
