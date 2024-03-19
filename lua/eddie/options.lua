@@ -2,6 +2,9 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.opt.guicursor = ""
+-- Tesing spell checker
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
